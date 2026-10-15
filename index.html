@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A fictional, educational cyber crisis decision simulator inspired by the ODTN Toronto December 2025 scenario.">
+<meta name="color-scheme" content="dark">
+<title>Toronto: Under Attack — Cyber Crisis Simulator</title>
+<style>
+:root{--bg:#07111d;--panel:#0d1b2a;--panel2:#102337;--line:#233b50;--text:#edf5fc;--muted:#9eb2c6;--cyan:#55d6d0;--amber:#ffcc66;--red:#ff6b78;--green:#8be0a2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -20%,#173650 0,transparent 45%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.brand{font-weight:800;letter-spacing:.12em;font-size:.9rem}.brand span{color:var(--cyan)}.pill{border:1px solid #39546b;border-radius:99px;padding:5px 10px;color:var(--muted);font-size:.78rem}.hero{padding:42px 0 28px;max-width:850px}.eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.16em;font-weight:800}.hero h1{font-size:clamp(2.5rem,7vw,5.2rem);line-height:.98;letter-spacing:-.055em;margin:12px 0 20px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p{color:var(--muted);font-size:1.08rem;max-width:720px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 24px}.nav button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:10px 14px;border-radius:8px}.nav button[aria-current=page]{background:var(--cyan);color:#06151b;border-color:var(--cyan);font-weight:800}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.card{background:linear-gradient(160deg,rgba(17,39,58,.95),rgba(10,25,39,.95));border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}.span12{grid-column:span 12}.card h2,.card h3{margin:0 0 10px;letter-spacing:-.02em}.muted{color:var(--muted)}.small{font-size:.86rem}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{background:#071522;border:1px solid var(--line);padding:13px;border-radius:10px}.stat b{display:block;font-size:1.7rem;line-height:1.2}.stat span{font-size:.78rem;color:var(--muted)}.status{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}.lineitem{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.lineitem:last-child{border-bottom:0}.dot{width:9px;height:9px;border-radius:50%;background:var(--red);margin-top:7px;flex:none}.dot.amber{background:var(--amber)}.dot.green{background:var(--green)}.btn{border:0;background:var(--cyan);color:#06151b;font-weight:800;border-radius:8px;padding:12px 16px}.btn.secondary{background:#152b3d;border:1px solid #35516a;color:var(--text)}.btn:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.actions{display:grid;gap:10px;margin-top:18px}.choice{display:block;text-align:left;background:#0a1927;border:1px solid #2a465d;color:var(--text);border-radius:10px;padding:15px}.choice:hover{border-color:var(--cyan)}.choice b{display:block;margin-bottom:4px}.choice small{display:block;color:var(--muted);font-size:.88rem}.choice[disabled]{opacity:.5;cursor:not-allowed}.bar{height:8px;background:#07121c;border-radius:99px;overflow:hidden;margin:8px 0 14px}.bar span{display:block;height:100%;background:var(--cyan);width:50%;transition:width .3s}.metric{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}.event{border-left:2px solid var(--line);padding:0 0 18px 16px;position:relative}.event:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);left:-5px;top:6px}.event:last-child{padding-bottom:0}.event time{font-size:.75rem;color:var(--cyan);letter-spacing:.08em}.event h3{font-size:1rem;margin:3px 0}.notice{border:1px solid #66532d;background:#2a2418;color:#ffe3a2;border-radius:10px;padding:12px 14px;font-size:.88rem}.success{border-color:#28563d;background:#11271c;color:#b7f3c7}.field{width:100%;min-height:130px;resize:vertical;background:#06131f;color:var(--text);border:1px solid #34516a;border-radius:9px;padding:12px}.feedback{padding:12px;border-radius:9px;background:#102b38;border:1px solid #2c5965;margin-top:12px}.hidden{display:none!important}footer{border-top:1px solid var(--line);margin-top:40px;padding:20px 0;color:var(--muted);font-size:.82rem}.tag{font-size:.72rem;border:1px solid var(--line);padding:3px 8px;border-radius:99px;color:var(--muted)}.bigscore{font-size:3.5rem;font-weight:850;letter-spacing:-.06em;color:var(--cyan)}@media(max-width:760px){.span8,.span7,.span6,.span5,.span4{grid-column:span 12}.shell{padding:16px}.hero{padding-top:30px}.statrow{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+  <div class="brand">ODTN FIELD EXERCISE <span>/ TORONTO</span></div>
+  <div class="pill">SIMULATION ONLY · NO LIVE SYSTEMS</div>
+</header>
+<section class="hero">
+  <div class="eyebrow">CYBER RESILIENCE · TABLETOP SIMULATOR</div>
+  <h1>TORONTO:<br><em>UNDER ATTACK.</em></h1>
+  <p>A cascading incident is unfolding across transit, healthcare, and mobile banking. A shared vendor pathway may connect the disruptions — and synthetic media is accelerating public confusion. You are the incident commander. What happens next depends on your decisions.</p>
+  <div class="notice">Fictional training scenario inspired by the ODTN Toronto, December 2025 exercise. This site is not an official ODTN, TTC, hospital, bank, or City of Toronto service.</div>
+</section>
+<nav class="nav" aria-label="Simulation views">
+  <button data-view="overview" aria-current="page">01 / Situation</button>
+  <button data-view="decisions">02 / Command decisions</button>
+  <button data-view="trust">03 / Public trust</button>
+  <button data-view="report">04 / After-action</button>
+</nav>
+
+<main>
+<section id="overview" class="view">
+  <div class="grid">
+    <div class="card span8">
+      <div class="status">● INCIDENT STATUS: ACTIVE</div>
+      <h2 style="font-size:1.7rem;margin-top:8px">Cross-sector service disruption</h2>
+      <p class="muted">Initial reports appeared unrelated. Investigators now suspect zero-click exploits are propagating through shared vendor infrastructure. The source and full scope remain unconfirmed.</p>
+      <div class="statrow">
+        <div class="stat"><b id="impact">3</b><span>SECTORS AFFECTED</span></div>
+        <div class="stat"><b id="trustStat">50</b><span>PUBLIC TRUST / 100</span></div>
+        <div class="stat"><b id="coordStat">35</b><span>RESPONSE COORDINATION / 100</span></div>
+      </div>
+    </div>
+    <div class="card span4">
+      <h3>Command priorities</h3>
+      <div class="lineitem"><span class="dot"></span><div><b>Protect life and safety</b><div class="muted small">Hospitals and transit operations</div></div></div>
+      <div class="lineitem"><span class="dot amber"></span><div><b>Understand the blast radius</b><div class="muted small">Shared vendors and dependencies</div></div></div>
+      <div class="lineitem"><span class="dot amber"></span><div><b>Communicate what is known</b><div class="muted small">Avoid amplifying unverified claims</div></div></div>
+    </div>
+    <div class="card span7">
+      <h3>Incident timeline</h3>
+      <div class="event"><time>09:05 · DETECTION</time><h3>TTC service disruptions</h3><div class="muted small">Operations teams report intermittent service and system anomalies.</div></div>
+      <div class="event"><time>09:17 · ESCALATION</time><h3>Hospital systems locked</h3><div class="muted small">Some clinical workflows switch to downtime procedures.</div></div>
+      <div class="event"><time>09:24 · CORRELATION</time><h3>Mobile-banking errors</h3><div class="muted small">Multiple organizations report failures involving a common technology vendor.</div></div>
+      <div class="event"><time>09:41 · INFORMATION CRISIS</time><h3>AI-generated video spreads</h3><div class="muted small">A purported official claims the city has lost control of essential services. Authenticity is unverified.</div></div>
+    </div>
+    <div class="card span5">
+      <h3>Dependency map</h3>
+      <p class="muted small">Illustrative relationships — not a real network map.</p>
+      <div class="lineitem"><span class="tag">VENDOR</span><div><b>Shared service provider</b><div class="muted small">Suspected common pathway</div></div></div>
+      <div class="lineitem"><span class="tag">PUBLIC</span><div><b>Transit / healthcare / finance</b><div class="muted small">Potentially affected organizations</div></div></div>
+      <div class="lineitem"><span class="tag">MEDIA</span><div><b>Social platforms</b><div class="muted small">Rumours and synthetic content</div></div></div>
+      <button class="btn" style="margin-top:12px" data-goto="decisions">Assume command →</button>
+    </div>
+  </div>
+</section>
+
+<section id="decisions" class="view hidden">
+  <div class="grid">
+    <div class="card span8">
+      <div class="eyebrow">DECISION POINT <span id="round">01</span> / 03</div>
+      <h2 id="decisionTitle" style="font-size:1.8rem;margin-top:8px">First response: coordinate or act?</h2>
+      <p id="decisionPrompt" class="muted">You have reports from three sectors, but the shared vendor connection is not yet confirmed. Choose your first move.</p>
+      <div class="actions" id="choices"></div>
+      <div id="decisionFeedback" class="feedback hidden" role="status" aria-live="polite"></div>
+      <button id="nextDecision" class="btn hidden" style="margin-top:14px">Next decision →</button>
+    </div>
+    <div class="card span4">
+      <h3>Live response indicators</h3>
+      <div class="metric"><span>Containment</span><b id="containVal">25/100</b></div><div class="bar"><span id="containBar" style="width:25%"></span></div>
+      <div class="metric"><span>Coordination</span><b id="coordVal">35/100</b></div><div class="bar"><span id="coordBar" style="width:35%"></span></div>
+      <div class="metric"><span>Public trust</span><b id="trustVal">50/100</b></div><div class="bar"><span id="trustBar" style="width:50%"></span></div>
+      <div class="notice" style="margin-top:18px">Trade-offs are intentional: speed, service continuity, evidence preservation, and public communication can pull in different directions.</div>
+    </div>
+    <div class="card span12">
+      <h3>Decision log</h3><div id="log" class="muted small">No decisions recorded yet. Your choices will appear here.</div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" class="view hidden">
+  <div class="grid">
+    <div class="card span7">
+      <div class="eyebrow">INFORMATION ENVIRONMENT</div>
+      <h2 style="font-size:1.8rem;margin-top:8px">A viral video claims the city is hiding a total shutdown.</h2>
+      <p class="muted">The clip uses an official-looking backdrop and a familiar voice. Its source is unknown. You have not verified the footage, metadata, or the speaker's statement.</p>
+      <div class="notice">Training clue: realistic appearance is not proof of authenticity. Avoid reposting the clip unnecessarily, and distinguish verified facts from reports still under investigation.</div>
+      <h3 style="margin-top:22px">Choose your response</h3>
+      <div class="actions">
+        <button class="choice" data-trust="reckless"><b>Publish a definitive denial immediately</b><small>Fast and confident, but key facts have not been verified.</small></button>
+        <button class="choice" data-trust="measured"><b>Publish a verified holding statement</b><small>State confirmed impacts, what is being checked, and when updates will follow.</small></button>
+        <button class="choice" data-trust="silent"><b>Say nothing until the investigation is complete</b><small>Avoids speculation but leaves an information vacuum.</small></button>
+      </div>
+      <div id="trustFeedback" class="feedback hidden" role="status" aria-live="polite"></div>
+    </div>
+    <div class="card span5">
+      <h3>Draft a public update</h3>
+      <p class="muted small">Write a short statement using only confirmed information. Do not include personal data, secrets, or real incident details.</p>
+      <label for="statement" class="small">Your simulated public statement</label>
+      <textarea id="statement" class="field" maxlength="500" placeholder="We are aware of disruptions affecting…"></textarea>
+      <div class="metric small"><span>Maximum 500 characters</span><span id="charCount">0 / 500</span></div>
+      <button id="reviewStatement" class="btn" style="margin-top:12px">Review statement locally</button>
+      <div id="statementFeedback" class="feedback hidden" role="status" aria-live="polite"></div>
+      <p class="muted small">Your draft is evaluated in this browser only. It is not sent to a server or AI service.</p>
+    </div>
+  </div>
+</section>
+
+<section id="report" class="view hidden">
+  <div class="grid">
+    <div class="card span8">
+      <div class="eyebrow">EXERCISE COMPLETE</div>
+      <h2 style="font-size:2rem;margin-top:8px">After-action report</h2>
+      <p class="muted">This score is a learning aid, not a real-world risk rating or prediction. Review the trade-offs your decisions created.</p>
+      <div class="bigscore" id="finalScore">—</div><div class="muted">SIMULATED RESPONSE SCORE / 100</div>
+      <div class="statrow">
+        <div class="stat"><b id="finalContain">—</b><span>CONTAINMENT</span></div>
+        <div class="stat"><b id="finalCoord">—</b><span>COORDINATION</span></div>
+        <div class="stat"><b id="finalTrust">—</b><span>PUBLIC TRUST</span></div>
+      </div>
+      <h3 style="margin-top:24px">Lessons to take forward</h3>
+      <ul id="lessons"><li>Establish shared situational awareness across sectors.</li><li>Protect critical services while investigating common dependencies.</li><li>Communicate promptly without presenting assumptions as facts.</li></ul>
+      <button class="btn" id="restart" style="margin-top:10px">Restart simulation</button>
+    </div>
+    <div class="card span4">
+      <h3>Security notes</h3>
+      <div class="lineitem"><span class="dot green"></span><div><b>No login or collection</b><div class="muted small">No accounts, passwords, analytics, or form submissions to a backend.</div></div></div>
+      <div class="lineitem"><span class="dot green"></span><div><b>Local-only interactions</b><div class="muted small">Decisions and draft review run in the browser.</div></div></div>
+      <div class="lineitem"><span class="dot amber"></span><div><b>Still review before launch</b><div class="muted small">Use HTTPS hosting, review dependencies and headers, and test on mobile.</div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <b>Educational simulation.</b> Inspired by the ODTN Toronto, December 2025 scenario. All event details, metrics, and outcomes on this website are fictional. Not affiliated with ODTN or any named public or private organization. <span style="display:block;margin-top:6px">Privacy by design: no backend, cookies, external scripts, or data transmission.</span>
+</footer>
+</div>
+<script>
+"use strict";
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const state = { view:"overview", round:0, containment:25, coordination:35, trust:50, choices:[], trustChoice:null };
+  const clamp = n => Math.max(0, Math.min(100, n));
+  const scenarios = [
+    {title:"First response: coordinate or act?",prompt:"You have reports from three sectors, but the shared vendor connection is not yet confirmed. Choose your first move.",choices:[
+      {title:"Establish incident command and a cross-sector bridge",desc:"Bring transit, healthcare, finance, telecom, and cyber responders together; share verified indicators.",delta:[8,22,5],feedback:"Strong coordination improves the shared picture. Make sure urgent life-safety actions continue in parallel."},
+      {title:"Disconnect every shared vendor connection immediately",desc:"Prioritize rapid isolation before dependencies and operational consequences are mapped.",delta:[20,-12,-4],feedback:"Broad isolation may slow propagation, but can disrupt essential services and destroy useful context if poorly coordinated."},
+      {title:"Wait for each organization to confirm its own incident",desc:"Avoid a joint response until the separate reports are fully validated.",delta:[-8,-12,-5],feedback:"Independent validation has value, but waiting delays cross-sector correlation and can widen the impact."}
+    ]},
+    {title:"Containment: protect services and evidence",prompt:"A vendor pathway is now a credible common factor. Some systems support time-sensitive services. What is your next move?",choices:[
+      {title:"Coordinate targeted isolation and preserve evidence",desc:"Prioritize critical functions, agree on containment boundaries, and preserve logs and forensic evidence.",delta:[18,14,5],feedback:"Targeted containment balances risk reduction with service continuity and gives investigators evidence to work with."},
+      {title:"Restore all systems before investigating",desc:"Focus on getting services back quickly, leaving the suspected pathway connected for now.",delta:[-10,2,4],feedback:"Restoration matters, but reconnecting before understanding the threat may permit reinfection or renewed disruption."},
+      {title:"Order a citywide shutdown of connected services",desc:"Use maximum isolation as a precaution, regardless of sector-specific dependencies.",delta:[15,-18,-12],feedback:"A sweeping shutdown can constrain some pathways, but cascading operational harm and public confusion may outweigh the benefit."}
+    ]},
+    {title:"Recovery: restore confidence as well as systems",prompt:"Containment is progressing, but the public is seeing conflicting updates and an AI-generated video. Choose a recovery posture.",choices:[
+      {title:"Use a joint update cadence and staged restoration criteria",desc:"Publish verified impacts, explain what remains unknown, and restore services against agreed safety checks.",delta:[8,14,18],feedback:"A shared cadence and clear restoration criteria support consistency, accountability, and public confidence."},
+      {title:"Let every organization issue its own uncoordinated updates",desc:"Maximize each organization's freedom to communicate independently.",delta:[0,-12,-10],feedback:"Local expertise is important, but inconsistent timing and terminology can deepen uncertainty."},
+      {title:"Promise full recovery by a fixed time before validation",desc:"Offer a confident deadline to reduce anxiety and pressure teams to move quickly.",delta:[-5,-4,-18],feedback:"Unsupported deadlines can damage trust if they are missed. Communicate progress and next-update times instead."}
+    ]}
+  ];
+  function showView(name) {
+    state.view = name;
+    document.querySelectorAll(".view").forEach(el => el.classList.toggle("hidden", el.id !== name));
+    document.querySelectorAll("[data-view]").forEach(btn => btn.setAttribute("aria-current", btn.dataset.view === name ? "page" : "false"));
+    if (name === "report") renderReport();
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+  document.querySelectorAll("[data-view]").forEach(btn => btn.addEventListener("click", () => showView(btn.dataset.view)));
+  document.querySelectorAll("[data-goto]").forEach(btn => btn.addEventListener("click", () => showView(btn.dataset.goto)));
+  function updateMetrics() {
+    $("containVal").textContent = state.containment + "/100";
+    $("coordVal").textContent = state.coordination + "/100";
+    $("trustVal").textContent = state.trust + "/100";
+    $("containBar").style.width = state.containment + "%";
+    $("coordBar").style.width = state.coordination + "%";
+    $("trustBar").style.width = state.trust + "%";
+    $("trustStat").textContent = state.trust;
+    $("coordStat").textContent = state.coordination;
+  }
+  function renderDecision() {
+    const s = scenarios[state.round];
+    $("round").textContent = String(state.round+1).padStart(2,"0");
+    $("decisionTitle").textContent = s.title;
+    $("decisionPrompt").textContent = s.prompt;
+    $("decisionFeedback").classList.add("hidden");
+    $("nextDecision").classList.add("hidden");
+    const box = $("choices"); box.replaceChildren();
+    s.choices.forEach((choice, i) => {
+      const b = document.createElement("button"); b.className="choice";
+      const strong=document.createElement("b"); strong.textContent=choice.title;
+      const small=document.createElement("small"); small.textContent=choice.desc;
+      b.append(strong,small);
+      b.addEventListener("click", () => chooseDecision(i));
+      box.appendChild(b);
+    });
+  }
+  function chooseDecision(index) {
+    const s=scenarios[state.round], c=s.choices[index];
+    state.containment=clamp(state.containment+c.delta[0]);
+    state.coordination=clamp(state.coordination+c.delta[1]);
+    state.trust=clamp(state.trust+c.delta[2]);
+    state.choices.push({title:s.title,choice:c.title,feedback:c.feedback});
+    $("decisionFeedback").textContent=c.feedback;
+    $("decisionFeedback").classList.remove("hidden");
+    document.querySelectorAll("#choices button").forEach(b=>b.disabled=true);
+    $("nextDecision").textContent=state.round===scenarios.length-1?"View after-action report →":"Next decision →";
+    $("nextDecision").classList.remove("hidden");
+    $("log").replaceChildren();
+    state.choices.forEach((item,i)=>{
+      const p=document.createElement("p"); p.textContent=`${i+1}. ${item.title} — ${item.choice}`; $("log").appendChild(p);
+    });
+    updateMetrics();
+    $("impact").textContent = "3";
+  }
+  $("nextDecision").addEventListener("click",()=>{
+    if(state.round<scenarios.length-1){state.round++;renderDecision();}
+    else showView("report");
+  });
+  document.querySelectorAll("[data-trust]").forEach(btn=>btn.addEventListener("click",()=>{
+    if(state.trustChoice) return;
+    const type=btn.dataset.trust;
+    const outcomes={
+      reckless:{delta:-12,text:"Risky: a definitive denial without verification can be contradicted by later evidence. Acknowledge known impacts and avoid claims you cannot substantiate."},
+      measured:{delta:12,text:"Best practice: a verified holding statement reduces the information vacuum while clearly separating confirmed facts from active investigation."},
+      silent:{delta:-8,text:"Silence avoids speculation, but people may fill the gap with rumours. Even a brief statement can explain what is known and when the next update will arrive."}
+    };
+    state.trust=clamp(state.trust+outcomes[type].delta); state.trustChoice=type; updateMetrics();
+    $("trustFeedback").textContent=outcomes[type].text; $("trustFeedback").classList.remove("hidden");
+    document.querySelectorAll("[data-trust]").forEach(b=>b.disabled=true);
+  }));
+  $("statement").addEventListener("input",()=>{$("charCount").textContent=$("statement").value.length+" / 500";});
+  $("reviewStatement").addEventListener("click",()=>{
+    const value=$("statement").value.trim();
+    const feedback=$("statementFeedback"); feedback.replaceChildren();
+    const words=value.split(/\s+/).filter(Boolean);
+    let tips=[];
+    if(value.length<30) tips.push("Add a little more context so the public knows what is affected.");
+    if(/\b(definitely|guaranteed|everything is safe|no risk|fake video)\b/i.test(value)) tips.push("Check for absolute claims that may not yet be verified.");
+    if(!/\b(known|confirmed|currently|investigat|update|next)\b/i.test(value)) tips.push("Consider stating what is confirmed, what is being investigated, or when the next update will arrive.");
+    if(!/\b(hospital|transit|service|bank|system|disruption)\b/i.test(value)) tips.push("Name the affected service only to the extent it is confirmed.");
+    if(!value) tips.push("Enter a draft before reviewing it.");
+    if(value.length>=30 && tips.length===0) tips.push("Good start. Have incident command and communications leads verify every factual claim before publication.");
+    feedback.textContent="Local checklist ("+words.length+" words): "+tips.join(" ");
+    feedback.classList.remove("hidden");
+  });
+  function renderReport(){
+    const score=Math.round((state.containment+state.coordination+state.trust)/3);
+    $("finalScore").textContent=score;
+    $("finalContain").textContent=state.containment;
+    $("finalCoord").textContent=state.coordination;
+    $("finalTrust").textContent=state.trust;
+    const lessons=[];
+    if(state.coordination<55) lessons.push("Improve cross-sector incident command, information-sharing, and dependency mapping.");
+    else lessons.push("Keep a shared incident picture and clearly assigned cross-sector responsibilities.");
+    if(state.containment<55) lessons.push("Define risk-based containment boundaries that protect essential services and preserve evidence.");
+    else lessons.push("Pair containment actions with evidence preservation and service-continuity plans.");
+    if(state.trust<55) lessons.push("Use a predictable public update cadence; label uncertainty and avoid unsupported claims.");
+    else lessons.push("Maintain trust through verified updates, clear uncertainty, and realistic restoration criteria.");
+    lessons.push("After recovery, document lessons across technology, supply chains, communication, AI, and coordination.");
+    $("lessons").replaceChildren(); lessons.forEach(t=>{const li=document.createElement("li");li.textContent=t;$("lessons").appendChild(li);});
+  }
+  $("restart").addEventListener("click",()=>{
+    state.round=0;state.containment=25;state.coordination=35;state.trust=50;state.choices=[];state.trustChoice=null;
+    document.querySelectorAll("[data-trust]").forEach(b=>b.disabled=false);
+    $("statement").value="";$("charCount").textContent="0 / 500";
+    $("trustFeedback").classList.add("hidden");$("statementFeedback").classList.add("hidden");
+    $("log").textContent="No decisions recorded yet. Your choices will appear here.";
+    updateMetrics();renderDecision();showView("overview");
+  });
+  updateMetrics(); renderDecision();
+})();
+</script>
+</body>
+</html>
