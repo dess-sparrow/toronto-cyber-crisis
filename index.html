@@ -10,6 +10,27 @@
 :root{--bg:#07111d;--panel:#0d1b2a;--panel2:#102337;--line:#233b50;--text:#edf5fc;--muted:#9eb2c6;--cyan:#55d6d0;--amber:#ffcc66;--red:#ff6b78;--green:#8be0a2}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -20%,#173650 0,transparent 45%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.brand{font-weight:800;letter-spacing:.12em;font-size:.9rem}.brand span{color:var(--cyan)}.pill{border:1px solid #39546b;border-radius:99px;padding:5px 10px;color:var(--muted);font-size:.78rem}.hero{padding:42px 0 28px;max-width:850px}.eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.16em;font-weight:800}.hero h1{font-size:clamp(2.5rem,7vw,5.2rem);line-height:.98;letter-spacing:-.055em;margin:12px 0 20px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p{color:var(--muted);font-size:1.08rem;max-width:720px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 24px}.nav button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:10px 14px;border-radius:8px}.nav button[aria-current=page]{background:var(--cyan);color:#06151b;border-color:var(--cyan);font-weight:800}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.card{background:linear-gradient(160deg,rgba(17,39,58,.95),rgba(10,25,39,.95));border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}.span12{grid-column:span 12}.card h2,.card h3{margin:0 0 10px;letter-spacing:-.02em}.muted{color:var(--muted)}.small{font-size:.86rem}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{background:#071522;border:1px solid var(--line);padding:13px;border-radius:10px}.stat b{display:block;font-size:1.7rem;line-height:1.2}.stat span{font-size:.78rem;color:var(--muted)}.status{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}.lineitem{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.lineitem:last-child{border-bottom:0}.dot{width:9px;height:9px;border-radius:50%;background:var(--red);margin-top:7px;flex:none}.dot.amber{background:var(--amber)}.dot.green{background:var(--green)}.btn{border:0;background:var(--cyan);color:#06151b;font-weight:800;border-radius:8px;padding:12px 16px}.btn.secondary{background:#152b3d;border:1px solid #35516a;color:var(--text)}.btn:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.actions{display:grid;gap:10px;margin-top:18px}.choice{display:block;text-align:left;background:#0a1927;border:1px solid #2a465d;color:var(--text);border-radius:10px;padding:15px}.choice:hover{border-color:var(--cyan)}.choice b{display:block;margin-bottom:4px}.choice small{display:block;color:var(--muted);font-size:.88rem}.choice[disabled]{opacity:.5;cursor:not-allowed}.bar{height:8px;background:#07121c;border-radius:99px;overflow:hidden;margin:8px 0 14px}.bar span{display:block;height:100%;background:var(--cyan);width:50%;transition:width .3s}.metric{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}.event{border-left:2px solid var(--line);padding:0 0 18px 16px;position:relative}.event:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);left:-5px;top:6px}.event:last-child{padding-bottom:0}.event time{font-size:.75rem;color:var(--cyan);letter-spacing:.08em}.event h3{font-size:1rem;margin:3px 0}.notice{border:1px solid #66532d;background:#2a2418;color:#ffe3a2;border-radius:10px;padding:12px 14px;font-size:.88rem}.success{border-color:#28563d;background:#11271c;color:#b7f3c7}.field{width:100%;min-height:130px;resize:vertical;background:#06131f;color:var(--text);border:1px solid #34516a;border-radius:9px;padding:12px}.feedback{padding:12px;border-radius:9px;background:#102b38;border:1px solid #2c5965;margin-top:12px}.hidden{display:none!important}footer{border-top:1px solid var(--line);margin-top:40px;padding:20px 0;color:var(--muted);font-size:.82rem}.tag{font-size:.72rem;border:1px solid var(--line);padding:3px 8px;border-radius:99px;color:var(--muted)}.bigscore{font-size:3.5rem;font-weight:850;letter-spacing:-.06em;color:var(--cyan)}@media(max-width:760px){.span8,.span7,.span6,.span5,.span4{grid-column:span 12}.shell{padding:16px}.hero{padding-top:30px}.statrow{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+
+/* Enhanced command-centre presentation */
+:root{--cyan:#69f0e5;--bg:#050d17;--panel:#0c1b2b;--line:#24445c}
+body{background:radial-gradient(ellipse at 80% -20%,#1c4865 0,transparent 42%),radial-gradient(ellipse at 0% 45%,#10263b 0,transparent 40%),var(--bg)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(105,240,229,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(105,240,229,.08) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+.card{box-shadow:0 12px 34px rgba(0,0,0,.16);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;backdrop-filter:blur(8px)}
+.card:hover{border-color:#38617b;box-shadow:0 16px 38px rgba(0,0,0,.24)}
+.hero h1{ text-shadow:0 0 38px rgba(105,240,229,.12)}
+.nav button{transition:all .2s ease}.nav button:hover{border-color:var(--cyan);color:var(--text);transform:translateY(-1px)}
+.btn{box-shadow:0 0 0 rgba(105,240,229,0);transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(105,240,229,.14)}
+.choice{transition:border-color .2s ease,background .2s ease,transform .2s ease}.choice:hover:not(:disabled){transform:translateX(3px);background:#102638}
+.dot.pulse,.pulse-dot{animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,120,.45)}50%{box-shadow:0 0 0 7px rgba(255,107,120,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.view:not(.hidden){animation:rise .35s ease both}.event,.stat,.sector{animation:rise .45s ease both}
+.command-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border:1px solid #24445c;background:rgba(7,21,34,.84);border-radius:12px;padding:12px 16px;margin:4px 0 20px}
+.command-label{display:flex;align-items:center;gap:9px;font-size:.78rem;font-weight:800;letter-spacing:.1em}.pulse-dot{width:8px;height:8px;background:var(--red);border-radius:50%;display:inline-block}
+.command-meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.8rem}.command-meta b{color:var(--text);font-variant-numeric:tabular-nums}
+.sector-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}.sector{border:1px solid var(--line);background:#081725;border-radius:10px;padding:13px}.sector-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.sector-name{font-weight:750}.sector-state{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}.sector-state.warn{color:var(--amber)}.sector-state.good{color:var(--green)}.sector p{font-size:.8rem;color:var(--muted);margin:8px 0 0}.feed-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:.86rem}.feed-item:last-child{border-bottom:0}.feed-time{font-size:.72rem;color:var(--cyan);white-space:nowrap;font-variant-numeric:tabular-nums}.progress-track{height:5px;background:#07121c;border-radius:99px;overflow:hidden;margin-top:12px}.progress-track span{display:block;height:100%;width:20%;background:linear-gradient(90deg,var(--cyan),#a6fff6);transition:width .35s ease}
+@media(max-width:760px){.sector-grid{grid-template-columns:1fr}.command-meta{gap:10px}.command-strip{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
@@ -24,6 +45,10 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
   <p>A cascading incident is unfolding across transit, healthcare, and mobile banking. A shared vendor pathway may connect the disruptions — and synthetic media is accelerating public confusion. You are the incident commander. What happens next depends on your decisions.</p>
   <div class="notice">Fictional training scenario inspired by the ODTN Toronto, December 2025 exercise. This site is not an official ODTN, TTC, hospital, bank, or City of Toronto service.</div>
 </section>
+<div class="command-strip" aria-label="Simulated operations status">
+  <div class="command-label"><span class="pulse-dot"></span><span>SIMULATED OPS FEED</span></div>
+  <div class="command-meta"><span>EXERCISE TIME <b id="simClock">09:41:00</b></span><span>PHASE <b id="phaseLabel">DETECTION</b></span><span>DECISIONS <b id="decisionCount">0 / 5</b></span></div>
+</div>
 <nav class="nav" aria-label="Simulation views">
   <button data-view="overview" aria-current="page">01 / Situation</button>
   <button data-view="decisions">02 / Command decisions</button>
@@ -44,6 +69,14 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
         <div class="stat"><b id="coordStat">35</b><span>RESPONSE COORDINATION / 100</span></div>
       </div>
     </div>
+    <div class="card span12">
+      <div class="metric"><h3>Sector readiness</h3><span class="tag">SIMULATED STATUS</span></div>
+      <div class="sector-grid">
+        <div class="sector"><div class="sector-head"><span class="sector-name">Transit / TTC</span><span id="transitState" class="sector-state">DISRUPTED</span></div><div class="bar"><span id="transitBar" style="width:24%;background:var(--red)"></span></div><p id="transitNote">Service reliability degraded; manual operating procedures under review.</p></div>
+        <div class="sector"><div class="sector-head"><span class="sector-name">Healthcare</span><span id="healthState" class="sector-state">CRITICAL</span></div><div class="bar"><span id="healthBar" style="width:18%;background:var(--red)"></span></div><p id="healthNote">Some clinical workflows using downtime procedures.</p></div>
+        <div class="sector"><div class="sector-head"><span class="sector-name">Mobile banking</span><span id="bankState" class="sector-state warn">DEGRADED</span></div><div class="bar"><span id="bankBar" style="width:38%;background:var(--amber)"></span></div><p id="bankNote">Intermittent errors reported; scope remains under investigation.</p></div>
+      </div>
+    </div>
     <div class="card span4">
       <h3>Command priorities</h3>
       <div class="lineitem"><span class="dot"></span><div><b>Protect life and safety</b><div class="muted small">Hospitals and transit operations</div></div></div>
@@ -56,6 +89,15 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
       <div class="event"><time>09:17 · ESCALATION</time><h3>Hospital systems locked</h3><div class="muted small">Some clinical workflows switch to downtime procedures.</div></div>
       <div class="event"><time>09:24 · CORRELATION</time><h3>Mobile-banking errors</h3><div class="muted small">Multiple organizations report failures involving a common technology vendor.</div></div>
       <div class="event"><time>09:41 · INFORMATION CRISIS</time><h3>AI-generated video spreads</h3><div class="muted small">A purported official claims the city has lost control of essential services. Authenticity is unverified.</div></div>
+    </div>
+    <div class="card span7">
+      <div class="metric"><h3>Operations feed</h3><span class="tag">SIMULATED · AUTO-UPDATES</span></div>
+      <div id="opsFeed" aria-live="polite">
+        <div class="feed-item"><span class="feed-time">09:41:00</span><span>Joint incident command requested; sector representatives assembling.</span></div>
+        <div class="feed-item"><span class="feed-time">09:41:12</span><span>Evidence preservation reminder issued to participating teams.</span></div>
+        <div class="feed-item"><span class="feed-time">09:41:24</span><span>Public information cell monitoring synthetic-media claims.</span></div>
+      </div>
+      <p class="muted small">This is a fictional exercise feed. It does not connect to live systems or current events.</p>
     </div>
     <div class="card span5">
       <h3>Dependency map</h3>
@@ -71,7 +113,8 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
 <section id="decisions" class="view hidden">
   <div class="grid">
     <div class="card span8">
-      <div class="eyebrow">DECISION POINT <span id="round">01</span> / 03</div>
+      <div class="eyebrow">DECISION POINT <span id="round">01</span> / 05</div>
+      <div class="progress-track" aria-label="Decision progress"><span id="decisionProgress" style="width:20%"></span></div>
       <h2 id="decisionTitle" style="font-size:1.8rem;margin-top:8px">First response: coordinate or act?</h2>
       <p id="decisionPrompt" class="muted">You have reports from three sectors, but the shared vendor connection is not yet confirmed. Choose your first move.</p>
       <div class="actions" id="choices"></div>
@@ -169,8 +212,50 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
       {title:"Use a joint update cadence and staged restoration criteria",desc:"Publish verified impacts, explain what remains unknown, and restore services against agreed safety checks.",delta:[8,14,18],feedback:"A shared cadence and clear restoration criteria support consistency, accountability, and public confidence."},
       {title:"Let every organization issue its own uncoordinated updates",desc:"Maximize each organization's freedom to communicate independently.",delta:[0,-12,-10],feedback:"Local expertise is important, but inconsistent timing and terminology can deepen uncertainty."},
       {title:"Promise full recovery by a fixed time before validation",desc:"Offer a confident deadline to reduce anxiety and pressure teams to move quickly.",delta:[-5,-4,-18],feedback:"Unsupported deadlines can damage trust if they are missed. Communicate progress and next-update times instead."}
+    ]},
+    {title:"Eradication: close the suspected pathway",prompt:"Teams have isolated the suspected vendor connection and are preserving evidence. What should responders prioritize before reconnecting systems?",choices:[
+      {title:"Validate clean builds, credentials, and vendor assurances",desc:"Check persistence, rotate exposed credentials where indicated, and require independent validation before reconnection.",delta:[18,10,5],feedback:"A verification-led eradication plan reduces the chance of re-entry. Keep recovery owners and acceptance criteria explicit."},
+      {title:"Reconnect quickly once the outage pressure rises",desc:"Restore connectivity based on availability pressure rather than validated security criteria.",delta:[-18,2,4],feedback:"Urgency is understandable, but reconnecting before validation can reintroduce the same threat and prolong disruption."},
+      {title:"Delete logs and rebuild everything immediately",desc:"Prioritize a clean slate without first confirming evidence preservation and service dependencies.",delta:[8,-8,-5],feedback:"Rebuilds may be necessary, but destroying logs or skipping dependency checks can impair investigation and cause avoidable outages."}
+    ]},
+    {title:"Lessons learned: strengthen shared resilience",prompt:"Services are stabilizing. The final decision determines whether the response becomes a lasting improvement or a temporary recovery.",choices:[
+      {title:"Run a cross-sector review with tracked owners and deadlines",desc:"Document what happened, test vendor dependencies, assign corrective actions, and rehearse communications together.",delta:[8,18,12],feedback:"A practical after-action plan turns lessons into accountable improvements and strengthens readiness across organizations."},
+      {title:"Close the incident once services are back",desc:"Return to normal operations and leave the review for later if time allows.",delta:[-3,-15,-6],feedback:"Service restoration is a milestone, not the end of learning. Without assigned follow-up, the same gaps can persist."},
+      {title:"Focus the review on technical teams only",desc:"Keep the exercise narrow and exclude communications, leadership, and vendor-management teams.",delta:[4,-10,-4],feedback:"Technical findings matter, but coordination, procurement, public information, and leadership decisions are also part of resilience."}
     ]}
   ];
+  const feedMessages = [
+    ["09:41:36","Cross-sector bridge opened; agencies are comparing verified indicators."],
+    ["09:41:48","Healthcare continuity check: clinical downtime procedures remain active in affected units."],
+    ["09:42:00","Vendor dependency review requested before any broad reconnection."],
+    ["09:42:12","Communications cell flags an unverified synthetic-media clip for verification."],
+    ["09:42:24","Evidence-handling reminder: preserve relevant logs and record containment actions."],
+    ["09:42:36","Service owners asked to define safe restoration criteria and next update times."]
+  ];
+  let feedIndex = 0;
+  function addFeedItem(time, message) {
+    const feed = $("opsFeed");
+    if (!feed) return;
+    const item = document.createElement("div"); item.className = "feed-item";
+    const stamp = document.createElement("span"); stamp.className = "feed-time"; stamp.textContent = time;
+    const content = document.createElement("span"); content.textContent = message;
+    item.append(stamp, content); feed.prepend(item);
+    while (feed.children.length > 4) feed.lastElementChild.remove();
+  }
+  function updateSectorStates() {
+    const c = state.containment;
+    const transit = c >= 70 ? ["STABILIZING", "good", 72, "Service continuity plan active; restoration checks underway."] : c >= 45 ? ["MONITORING", "warn", 48, "Targeted containment and operational checks underway."] : ["DISRUPTED", "", 24, "Service reliability degraded; manual operating procedures under review."];
+    const health = c >= 75 ? ["STABILIZING", "good", 68, "Clinical continuity checks and safe restoration criteria in progress."] : c >= 48 ? ["HIGH PRIORITY", "warn", 42, "Clinical downtime procedures remain available while checks continue."] : ["CRITICAL", "", 18, "Some clinical workflows using downtime procedures."];
+    const bank = c >= 65 ? ["RECOVERING", "good", 75, "Validation checks underway before full service restoration."] : c >= 40 ? ["MONITORING", "warn", 52, "Intermittent errors being assessed alongside shared dependencies."] : ["DEGRADED", "warn", 38, "Intermittent errors reported; scope remains under investigation."];
+    [["transit",transit],["health",health],["bank",bank]].forEach(([id,data])=>{
+      const label=$(id+"State"); const bar=$(id+"Bar"); const note=$(id+"Note");
+      if(label){label.textContent=data[0];label.className="sector-state "+data[1];}
+      if(bar){bar.style.width=data[2]+"%";bar.style.background=data[1]==="good"?"var(--green)":data[1]==="warn"?"var(--amber)":"var(--red)";}
+      if(note)note.textContent=data[3];
+    });
+    $("decisionCount").textContent = state.choices.length + " / " + scenarios.length;
+    $("phaseLabel").textContent = state.choices.length < 2 ? "DETECTION" : state.choices.length < 4 ? "CONTAINMENT" : "RECOVERY";
+  }
   function showView(name) {
     state.view = name;
     document.querySelectorAll(".view").forEach(el => el.classList.toggle("hidden", el.id !== name));
@@ -189,10 +274,12 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
     $("trustBar").style.width = state.trust + "%";
     $("trustStat").textContent = state.trust;
     $("coordStat").textContent = state.coordination;
+    updateSectorStates();
   }
   function renderDecision() {
     const s = scenarios[state.round];
     $("round").textContent = String(state.round+1).padStart(2,"0");
+    $("decisionProgress").style.width = ((state.round+1)/scenarios.length*100) + "%";
     $("decisionTitle").textContent = s.title;
     $("decisionPrompt").textContent = s.prompt;
     $("decisionFeedback").classList.add("hidden");
@@ -217,6 +304,8 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
     $("decisionFeedback").classList.remove("hidden");
     document.querySelectorAll("#choices button").forEach(b=>b.disabled=true);
     $("nextDecision").textContent=state.round===scenarios.length-1?"View after-action report →":"Next decision →";
+    addFeedItem(feedMessages[feedIndex % feedMessages.length][0], feedMessages[feedIndex % feedMessages.length][1]); feedIndex++;
+    $("simClock").textContent = feedMessages[(feedIndex-1) % feedMessages.length][0];
     $("nextDecision").classList.remove("hidden");
     $("log").replaceChildren();
     state.choices.forEach((item,i)=>{
@@ -273,7 +362,9 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
     $("lessons").replaceChildren(); lessons.forEach(t=>{const li=document.createElement("li");li.textContent=t;$("lessons").appendChild(li);});
   }
   $("restart").addEventListener("click",()=>{
-    state.round=0;state.containment=25;state.coordination=35;state.trust=50;state.choices=[];state.trustChoice=null;
+    state.round=0;state.containment=25;state.coordination=35;state.trust=50;state.choices=[];state.trustChoice=null;feedIndex=0;
+    $("simClock").textContent="09:41:00";$("phaseLabel").textContent="DETECTION";$("decisionCount").textContent="0 / "+scenarios.length;
+    $("opsFeed").replaceChildren();feedMessages.slice(0,3).forEach(item=>addFeedItem(item[0],item[1]));
     document.querySelectorAll("[data-trust]").forEach(b=>b.disabled=false);
     $("statement").value="";$("charCount").textContent="0 / 500";
     $("trustFeedback").classList.add("hidden");$("statementFeedback").classList.add("hidden");
@@ -281,6 +372,14 @@ a{color:var(--cyan)}button,textarea,input{font:inherit}button{cursor:pointer}.sh
     updateMetrics();renderDecision();showView("overview");
   });
   updateMetrics(); renderDecision();
+  window.setInterval(() => {
+    if (state.view === "overview") {
+      const item = feedMessages[feedIndex % feedMessages.length];
+      addFeedItem(item[0], item[1]);
+      $("simClock").textContent = item[0];
+      feedIndex++;
+    }
+  }, 9000);
 })();
 </script>
 </body>

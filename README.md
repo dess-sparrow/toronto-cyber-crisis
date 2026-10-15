@@ -1,6 +1,6 @@
 # Toronto: Under Attack — Cyber Crisis Simulator
 
-A static, client-side educational simulation inspired by the ODTN Toronto, December 2025 scenario.
+A static, client-side educational simulation inspired by the ODTN Toronto, December 2025 scenario. Includes an animated command-centre interface, simulated operations feed, sector readiness indicators, and five branching decision points.
 
 ## Run locally
 Open `index.html` in a modern browser. No build step, packages, API keys, database, or backend are required.
@@ -25,7 +25,7 @@ Drag the folder containing `index.html` into Netlify's manual deploy flow, or co
 
 ## Before submission
 - Publish and verify the public URL.
-- Test all four views, decision choices, reset, and public statement checker.
+- Test all four views, all five decision rounds, sector status updates, simulated operations feed, reset, and public statement checker.
 - Inspect the browser console and test mobile layout.
 - If using a custom domain, enable HTTPS.
 - Consider adding security headers at the hosting layer (e.g. a restrictive Content-Security-Policy, `X-Content-Type-Options: nosniff`, and `Referrer-Policy: no-referrer`). Validate the policy against the final hosting setup.
